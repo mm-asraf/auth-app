@@ -8,7 +8,12 @@ connect();
 
 
 const app = express();
+app.use(express.json());
 
+const userController = require('./src/controller/user.controller')
+
+//controller
+app.use("/api/v1",userController);
 
 
 //LOgging
